@@ -1,0 +1,14 @@
+.env
+*.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+data/chroma_db/
+data/raw/
+data/bm25_index.pkl
+*.pdf
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
