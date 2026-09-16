@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What is Retrieval-Augmented Generation (RAG)?",
+    "ground_truth": "RAG is a technique that enhances large language models by retrieving relevant information from external knowledge bases before generating responses, reducing hallucinations and allowing knowledge updates without retraining."
+  },
+  {
+    "question": "Why do we split documents into chunks before embedding?",
+    "ground_truth": "Chunking is done because LLMs have context window limits and because embedding a full document averages all its topics together, losing precision. Smaller focused chunks retrieve more accurately and fit within context limits."
+  },
+  {
+    "question": "What is the difference between a bi-encoder and a cross-encoder?",
+    "ground_truth": "A bi-encoder encodes the query and document separately then compares the vectors — fast but less precise. A cross-encoder takes query and document as a single joint input — much more accurate but too slow for large-scale retrieval."
+  },
+  {
+    "question": "What is cosine similarity and why is it used in vector search?",
+    "ground_truth": "Cosine similarity measures the angle between two vectors, not their magnitude. It captures semantic similarity regardless of document length — a short and long chunk on the same topic score similarly."
+  },
+  {
+    "question": "What is BM25 and when does it outperform dense retrieval?",
+    "ground_truth": "BM25 is a keyword-based ranking algorithm scoring documents by term frequency and inverse document frequency. It outperforms dense retrieval for exact-match queries involving rare proper nouns, numbers, and codes that dense embeddings dilute."
+  },
+  {
+    "question": "What is Reciprocal Rank Fusion (RRF) and why is it used?",
+    "ground_truth": "RRF combines multiple ranked lists using 1/(k + rank) summed across retrievers. It merges dense and sparse results without calibrating scores from different scales — only rank positions matter."
+  },
+  {
+    "question": "What is the two-stage retrieve-then-rerank strategy?",
+    "ground_truth": "Stage 1 uses a fast bi-encoder to retrieve top-20 candidates. Stage 2 uses an accurate cross-encoder to rerank only those 20 and pick the final top-5. This gives the speed of bi-encoders and accuracy of cross-encoders."
+  },
+  {
+    "question": "What is HyDE and why does it improve retrieval?",
+    "ground_truth": "HyDE generates a hypothetical answer to the query, then embeds that answer instead of the question. A hypothetical answer and a real answer have very similar embeddings because they share domain vocabulary, while a question and its answer often do not."
+  },
+  {
+    "question": "What is multi-query expansion in RAG?",
+    "ground_truth": "Multi-query expansion generates multiple paraphrases of the original query, retrieves chunks for each, then fuses all results with RRF. Different phrasings activate different relevant chunks, improving overall recall."
+  },
+  {
+    "question": "Why is temperature set to 0 for RAG generation?",
+    "ground_truth": "Temperature 0 makes LLM output deterministic. In RAG the goal is factual accuracy grounded in retrieved context, not creative variation. Deterministic output allows reproducible, evaluatable, debuggable answers."
+  },
+  {
+    "question": "What is the RAGAS faithfulness metric?",
+    "ground_truth": "RAGAS faithfulness measures whether every claim in the generated answer is supported by the retrieved context. A score of 1.0 means fully grounded in context. Lower scores indicate hallucination — claims made outside the provided context."
+  },
+  {
+    "question": "What is the difference between context recall and context precision in RAGAS?",
+    "ground_truth": "Context recall measures whether retrieved chunks cover all facts needed to answer (completeness). Context precision measures whether retrieved chunks are focused and relevant (signal-to-noise). High recall with low precision means you retrieved everything but also a lot of noise."
+  },
+  {
+    "question": "What is the RAGAS score?",
+    "ground_truth": "The RAGAS score is the harmonic mean of faithfulness, answer relevance, context recall, and context precision. A production target is above 0.75 on all four metrics."
+  },
+  {
+    "question": "Why is chunk overlap important when splitting documents?",
+    "ground_truth": "Chunk overlap ensures context at chunk boundaries is not lost. Without overlap, a sentence split across boundaries would be incomplete in both chunks. Typical overlap is 10-15% of chunk size."
+  },
+  {
+    "question": "What embedding model is used and what are its properties?",
+    "ground_truth": "The system uses all-MiniLM-L6-v2, a 22M parameter sentence encoder producing 384-dimensional vectors. It runs locally on CPU with no API cost and was fine-tuned on over 1 billion sentence pairs."
+  },
+  {
+    "question": "How does the citation system work in M5?",
+    "ground_truth": "The LLM returns JSON with answer and cited_chunks (1-indexed chunk numbers). The system maps those indices back to real metadata — filename, page number, text excerpt — giving full provenance for every claim."
+  },
+  {
+    "question": "What cross-encoder model is used for reranking and why?",
+    "ground_truth": "cross-encoder/ms-marco-MiniLM-L-6-v2, fine-tuned on 530k real search queries from MS MARCO. It runs on CPU in ~50ms for 20 passages and returns a relevance logit directly measuring how well a chunk answers the specific query."
+  },
+  {
+    "question": "What are the three steps of the ingestion pipeline?",
+    "ground_truth": "Step 1 (Loader) reads PDF and text files into Document objects with metadata. Step 2 (Chunker) splits them into overlapping chunks. Step 3 (Embedder) converts each chunk to a vector, stores it in ChromaDB, and builds the BM25 index."
+  },
+  {
+    "question": "Why is upsert used instead of add when storing chunks in ChromaDB?",
+    "ground_truth": "Upsert overwrites existing chunks with the same ID rather than creating duplicates, making ingestion idempotent. You can safely re-run the pipeline after changing chunk size or embedding model without accumulating duplicate entries."
+  },
+  {
+    "question": "What does evaluate_simple do and when should you use it?",
+    "ground_truth": "evaluate_simple computes token overlap heuristics between answers, contexts, and ground truth — no API calls required. Use it for CI pipelines or quick iteration. Use evaluate_with_ragas for production-quality LLM-as-judge metrics."
+  },
+  {
+    "question": "What is the k=60 constant in RRF?",
+    "ground_truth": "k=60 is from the original 2009 Cormack et al. paper. Higher k makes all rank positions contribute more equally. Lower k makes top-ranked items dominate more aggressively. k=60 was empirically found to work well across many retrieval tasks."
+  },
+  {
+    "question": "How does the system prevent hallucination?",
+    "ground_truth": "Three mechanisms: the system prompt instructs the LLM to use ONLY provided context; temperature=0 ensures deterministic output; the citation system forces the LLM to identify which chunks supported each claim, making hallucination detectable."
+  },
+  {
+    "question": "What metadata is stored with each chunk?",
+    "ground_truth": "Each chunk stores file_name, page number, file_type, chunk_index, and chunk_size. This enables citations, source attribution, debugging retrieval quality, and tracing answers back to specific document locations."
+  },
+  {
+    "question": "What is the difference between answer relevance and faithfulness in RAGAS?",
+    "ground_truth": "Answer relevance measures whether the answer addresses the question asked. Faithfulness measures whether the answer's claims are grounded in retrieved context. A perfect RAG answer scores high on both."
+  },
+  {
+    "question": "What are the production targets for RAGAS metrics?",
+    "ground_truth": "The production target is above 0.75 on all four metrics. Scores below 0.5 indicate a serious problem. Scores between 0.5 and 0.75 suggest the system works but needs improvement in chunking, retrieval candidates, or reranking."
+  },
+  {
+    "question": "What is ChromaDB and how is it used?",
+    "ground_truth": "ChromaDB is a local persistent vector database storing chunk embeddings on disk. It supports cosine similarity search and reuses the same collection across sessions. In production it would be replaced by Pinecone, Weaviate, or Qdrant for scalability."
+  },
+  {
+    "question": "How does the pipeline support ablation testing?",
+    "ground_truth": "PipelineConfig has boolean flags for each milestone: use_query_rewriting, use_hybrid_search, use_reranking, use_citations. CLI flags --simple, --no-rewrite, --no-rerank, --no-hybrid disable individual stages for direct comparison."
+  },
+  {
+    "question": "What is CANDIDATES_PER_RETRIEVER and why is it 20?",
+    "ground_truth": "CANDIDATES_PER_RETRIEVER is how many chunks each retriever fetches before RRF fusion. It is 20 because the cross-encoder needs enough candidates to find all relevant chunks — restricting to top-5 from each retriever alone may miss results that only the other retriever found."
+  },
+  {
+    "question": "Why does RecursiveCharacterTextSplitter work better than fixed-size splitting?",
+    "ground_truth": "RecursiveCharacterTextSplitter tries to split on natural boundaries — paragraphs, sentences, words — only falling back to smaller separators if the chunk is still too large. This preserves semantic coherence better than naive fixed-size character splitting."
+  },
+  {
+    "question": "Why does HyDE embed a hypothetical answer rather than expanding the question into keywords?",
+    "ground_truth": "Dense embedding models are trained on passage similarity, not question-to-passage similarity. A hypothetical answer and real answer share domain vocabulary and live in the same region of embedding space. A bare question and its answer often have low cosine similarity despite being semantically related."
+  }
+]
