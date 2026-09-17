@@ -1,0 +1,5 @@
+# Multi-Agent Research System dependencies
+requests>=2.31.0       # HTTP calls to Ollama API
+python-dotenv>=1.0.0   # reads .env file
+rich>=13.7.0           # pretty terminal output (colours, panels, tables)
+pytest>=8.2.0          # testing
