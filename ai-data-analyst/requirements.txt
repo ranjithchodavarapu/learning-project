@@ -1,0 +1,8 @@
+# AI Data Analyst dependencies
+pandas>=2.0.0          # data loading, manipulation, statistics
+matplotlib>=3.7.0      # chart generation (saved as PNG)
+numpy>=1.24.0          # numerical operations, sample data generation
+requests>=2.31.0       # HTTP calls to Ollama API
+python-dotenv>=1.0.0   # reads .env file
+rich>=13.7.0           # pretty terminal output
+pytest>=8.2.0          # testing
