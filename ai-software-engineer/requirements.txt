@@ -1,0 +1,4 @@
+requests>=2.31.0       # HTTP calls to Ollama
+python-dotenv>=1.0.0   # reads .env file
+rich>=13.7.0           # pretty terminal output
+pytest>=8.2.0          # runs generated tests + our own tests
