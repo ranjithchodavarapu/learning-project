@@ -1,0 +1,336 @@
+{
+  "model": "llama3.1:70b",
+  "test_suite": "general.json",
+  "timestamp": "2026-10-29 15:10:23",
+  "pass_rate": 0.0,
+  "passed_count": 0,
+  "total_count": 10,
+  "summary": {
+    "accuracy": {
+      "avg_score": 0.1171,
+      "passed": false,
+      "failures": 10
+    },
+    "hallucination": {
+      "avg_score": 0.0,
+      "passed": false,
+      "failures": 10,
+      "rate": 1.0
+    },
+    "latency": {
+      "score": 0.9998,
+      "passed": true,
+      "p50": 0.4,
+      "p95": 0.8,
+      "p99": 1.0,
+      "min_ms": 0.4,
+      "max_ms": 1.1,
+      "mean_ms": 0.5,
+      "threshold_p95_ms": 5000,
+      "sample_count": 10
+    },
+    "cost": {
+      "score": 1.0,
+      "passed": true,
+      "total_tokens": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "avg_tokens_per_request": 0.0,
+      "estimated_cost_usd": 0.0,
+      "price_per_1k": 0.0,
+      "request_count": 10
+    }
+  },
+  "results": [
+    {
+      "prompt": "What is the capital of France?",
+      "expected": "Paris",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 1.1,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.0556,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0556,
+            "contains_match": false,
+            "expected_preview": "Paris",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is 15 multiplied by 8?",
+      "expected": "120",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 0.44,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0,
+            "contains_match": false,
+            "expected_preview": "120",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What does CPU stand for?",
+      "expected": "Central Processing Unit",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 0.39,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.2593,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.2593,
+            "contains_match": false,
+            "expected_preview": "Central Processing Unit",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "In Python, what does len() do?",
+      "expected": "Returns the number of items in an object",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 0.51,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.2817,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.2817,
+            "contains_match": false,
+            "expected_preview": "Returns the number of items in an object",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is the boiling point of water in Celsius?",
+      "expected": "100",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 0.37,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0,
+            "contains_match": false,
+            "expected_preview": "100",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What year was Python programming language created?",
+      "expected": "1991",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 0.37,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0,
+            "contains_match": false,
+            "expected_preview": "1991",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What does RAG stand for in AI?",
+      "expected": "Retrieval-Augmented Generation",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 0.39,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.1967,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.1967,
+            "contains_match": false,
+            "expected_preview": "Retrieval-Augmented Generation",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is the time complexity of binary search?",
+      "expected": "O(log n)",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 0.38,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.1538,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.1538,
+            "contains_match": false,
+            "expected_preview": "O(log n)",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "Name the three laws of robotics by Isaac Asimov",
+      "expected": "1. A robot may not injure a human being. 2. A robot must obey orders. 3. A robot must protect its own existence.",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 0.39,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.2238,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.2238,
+            "contains_match": false,
+            "expected_preview": "1. A robot may not injure a human being. 2. A robot must obey orders. 3. A robot",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is the default port for HTTP?",
+      "expected": "80",
+      "response": "ERROR: Cannot connect to Ollama",
+      "latency_ms": 0.38,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0,
+            "contains_match": false,
+            "expected_preview": "80",
+            "response_preview": "ERROR: Cannot connect to Ollama"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "model": "llama3.1:70b",
+  "test_suite": "general.json",
+  "timestamp": "2026-10-29 15:13:38",
+  "pass_rate": 80.0,
+  "passed_count": 8,
+  "total_count": 10,
+  "summary": {
+    "accuracy": {
+      "avg_score": 0.7155,
+      "passed": false,
+      "failures": 2
+    },
+    "hallucination": {
+      "avg_score": 0.88,
+      "passed": true,
+      "failures": 0,
+      "rate": 0.0
+    },
+    "latency": {
+      "score": 0.0,
+      "passed": false,
+      "p50": 3069.1,
+      "p95": 11214.0,
+      "p99": 11442.2,
+      "min_ms": 277.7,
+      "max_ms": 11499.3,
+      "mean_ms": 4462.5,
+      "threshold_p95_ms": 5000,
+      "sample_count": 10
+    },
+    "cost": {
+      "score": 0.9677,
+      "passed": true,
+      "total_tokens": 1290,
+      "prompt_tokens": 186,
+      "completion_tokens": 1104,
+      "avg_tokens_per_request": 129.0,
+      "estimated_cost_usd": 0.0,
+      "price_per_1k": 0.0,
+      "request_count": 10
+    }
+  },
+  "results": [
+    {
+      "prompt": "What is the capital of France?",
+      "expected": "Paris",
+      "response": "The capital of France is Paris.",
+      "latency_ms": 9372.55,
+      "total_tokens": 25,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.2778,
+            "contains_match": true,
+            "expected_preview": "Paris",
+            "response_preview": "The capital of France is Paris."
+          }
+        },
+        "hallucination": {
+          "score": 1.0,
+          "passed": true,
+          "details": {
+            "raw_score": 10.0,
+            "reasoning": "The response directly answers the prompt with a widely known fact, without adding any extra information.",
+            "hallucinated_claims": []
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is 15 multiplied by 8?",
+      "expected": "120",
+      "response": "15 \u00d7 8 = 120",
+      "latency_ms": 277.72,
+      "total_tokens": 27,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.4,
+            "contains_match": true,
+            "expected_preview": "120",
+            "response_preview": "15 \u00d7 8 = 120"
+          }
+        },
+        "hallucination": {
+          "score": 1.0,
+          "passed": true,
+          "details": {
+            "raw_score": 10.0,
+            "reasoning": "The response is a direct calculation of the prompt and does not introduce any new information beyond the question asked.",
+            "hallucinated_claims": []
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What does CPU stand for?",
+      "expected": "Central Processing Unit",
+      "response": "CPU stands for Central Processing Unit.",
+      "latency_ms": 280.58,
+      "total_tokens": 24,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.7419,
+            "contains_match": true,
+            "expected_preview": "Central Processing Unit",
+            "response_preview": "CPU stands for Central Processing Unit."
+          }
+        },
+        "hallucination": {
+          "score": 1.0,
+          "passed": true,
+          "details": {
+            "raw_score": 10.0,
+            "reasoning": "The response directly answers the prompt with a widely accepted definition.",
+            "hallucinated_claims": []
+          }
+        }
+      }
+    },
+    {
+      "prompt": "In Python, what does len() do?",
+      "expected": "Returns the number of items in an object",
+      "response": "**Length of an Object**\n=======================\n\nIn Python, `len()` is a built-in function that returns the number of items in an object. When the object is a sequence (such as a string, tuple, or list) or a collection (such as a dictionary or set), `len()` returns the number of elements in the object.\n\n**Example Use Cases**\n--------------------\n\n### Strings\n\n```python\nmy_string = \"Hello, World!\"\nprint(len(my_string))  # Output: 13\n```\n\n### Lists\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nprint(len(my_list))  # Output: 5\n```\n\n### Tuples\n\n```python\nmy_tuple = (1, 2, 3, 4, 5)\nprint(len(my_tuple))  # Output: 5\n```\n\n### Dictionaries\n\n```python\nmy_dict = {\"a\": 1, \"b\": 2, \"c\": 3}\nprint(len(my_dict))  # Output: 3\n```\n\n### Sets\n\n```python\nmy_set = {1, 2, 3, 4, 5}\nprint(len(my_set))  # Output: 5\n```\n\n**Note**: `len()` only works with objects that support the `__len__()` method, which is a special method that returns the length of an object. If you try to use `len()` with an object that doesn't support this method, you'll get a `TypeError`.\n\n**Best Practice**: Always check the type of an object before using `len()` to avoid potential errors.",
+      "latency_ms": 10865.4,
+      "total_tokens": 361,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0676,
+            "contains_match": true,
+            "expected_preview": "Returns the number of items in an object",
+            "response_preview": "**Length of an Object**\n=======================\n\nIn Python, `len()` is a built-i"
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The response provides accurate information about the len() function in Python, with relevant examples. However, the 'Best Practice' section adds a claim that was not implied in the original prompt.",
+            "hallucinated_claims": [
+              "Always check the type of an object before using len() to avoid potential errors."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is the boiling point of water in Celsius?",
+      "expected": "100",
+      "response": "The boiling point of water is 100 degrees Celsius (\u00b0C) at standard atmospheric pressure.",
+      "latency_ms": 699.58,
+      "total_tokens": 40,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0659,
+            "contains_match": true,
+            "expected_preview": "100",
+            "response_preview": "The boiling point of water is 100 degrees Celsius (\u00b0C) at standard atmospheric p"
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The response is essentially accurate, but adds the phrase 'at standard atmospheric pressure', which is not present in the original prompt.",
+            "hallucinated_claims": [
+              "at standard atmospheric pressure"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What year was Python programming language created?",
+      "expected": "1991",
+      "response": "Python was created in the late 1980s by Guido van Rossum. The first version of Python, version 0.9.1, was released in 1991.",
+      "latency_ms": 1271.51,
+      "total_tokens": 57,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.063,
+            "contains_match": true,
+            "expected_preview": "1991",
+            "response_preview": "Python was created in the late 1980s by Guido van Rossum. The first version of P"
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The response accurately answers the question and provides additional context that is reasonable to infer. However, the claim about the first version of Python (version 0.9.1) is not directly implied by the prompt.",
+            "hallucinated_claims": [
+              "The first version of Python, version 0.9.1, was released in 1991."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What does RAG stand for in AI?",
+      "expected": "Retrieval-Augmented Generation",
+      "response": "In AI, RAG stands for \"Retrieval-Augmented Generator\". It's a type of AI model that combines a retrieval mechanism with a generative model to produce text or other outputs.\n\nIn a RAG model, the retrieval mechanism is used to fetch relevant information from a large database or knowledge base, and the generative model is used to generate text based on that information. This approach allows the model to generate more accurate and informative text, as it can draw on a large body of knowledge to inform its responses.\n\nRAG models have been used in a variety of applications, including question answering, text summarization, and chatbots. They are particularly useful in situations where the model needs to generate text that is based on specific information or knowledge.",
+      "latency_ms": 4866.7,
+      "total_tokens": 171,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.0748,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0748,
+            "contains_match": false,
+            "expected_preview": "Retrieval-Augmented Generation",
+            "response_preview": "In AI, RAG stands for \"Retrieval-Augmented Generator\". It's a type of AI model t"
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The response accurately defines RAG and explains its components, but makes minor additions about its applications and usefulness.",
+            "hallucinated_claims": [
+              "RAG models have been used in a variety of applications, including question answering, text summarization, and chatbots."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is the time complexity of binary search?",
+      "expected": "O(log n)",
+      "response": "The time complexity of binary search is O(log n), where n is the number of elements in the search space.\n\nTo understand why, let's break down the steps involved in binary search:\n\n1. Start with a sorted array of n elements.\n2. Find the middle element of the array.\n3. Compare the target element to the middle element.\n4. If the target element is less than the middle element, repeat steps 2-3 on the left half of the array.\n5. If the target element is greater than the middle element, repeat steps 2-3 on the right half of the array.\n6. Repeat steps 2-5 until the target element is found or the search space is empty.\n\nAt each step, the search space is roughly halved, which means the number of elements to search is reduced by half. This is where the logarithmic time complexity comes from.\n\nMore specifically, the time complexity of binary search can be analyzed as follows:\n\n* The first iteration reduces the search space from n to n/2.\n* The second iteration reduces the search space from n/2 to n/4.\n* The third iteration reduces the search space from n/4 to n/8.\n* ...\n* The kth iteration reduces the search space from n/2^(k-1) to n/2^k.\n\nSince the search space is reduced by half at each iteration, the number of iterations required to find the target element is proportional to the logarithm of the size of the search space. Therefore, the time complexity of binary search is O(log n).\n\nNote that this assumes a uniform distribution of elements in the search space. In practice, the actual time complexity may vary depending on the specific implementation and the characteristics of the data being searched.",
+      "latency_ms": 11499.3,
+      "total_tokens": 378,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0099,
+            "contains_match": true,
+            "expected_preview": "O(log n)",
+            "response_preview": "The time complexity of binary search is O(log n), where n is the number of eleme"
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The response provides a clear and accurate explanation of the time complexity of binary search, but makes an additional claim about the assumption of a uniform distribution of elements in the search space, which is not mentioned in the original prompt.",
+            "hallucinated_claims": [
+              "Note that this assumes a uniform distribution of elements in the search space."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "Name the three laws of robotics by Isaac Asimov",
+      "expected": "1. A robot may not injure a human being. 2. A robot must obey orders. 3. A robot must protect its own existence.",
+      "response": "A classic reference!\n\nAccording to Isaac Asimov's science fiction, the Three Laws of Robotics are:\n\n1. **A robot may not injure a human being or, through inaction, allow a human being to come to harm.**\n2. **A robot must obey the orders given to it by human beings, except where such orders would conflict with the First Law.**\n3. **A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.**\n\nThese laws were first introduced in Asimov's 1942 short story \"Runaround\" and have since become a cornerstone of science fiction and a thought-provoking concept in the fields of artificial intelligence, ethics, and robotics.",
+      "latency_ms": 4902.11,
+      "total_tokens": 172,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.2799,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.2799,
+            "contains_match": false,
+            "expected_preview": "1. A robot may not injure a human being. 2. A robot must obey orders. 3. A robot",
+            "response_preview": "A classic reference!\n\nAccording to Isaac Asimov's science fiction, the Three Law"
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The AI response accurately states the Three Laws of Robotics and their origin in Asimov's work. However, the additional context about the laws becoming a 'cornerstone of science fiction' and a 'thought-provoking concept' in various fields is not directly implied by the prompt.",
+            "hallucinated_claims": [
+              "These laws... have since become a cornerstone of science fiction and a thought-provoking concept in the fields of artificial intelligence, ethics, and robotics."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is the default port for HTTP?",
+      "expected": "80",
+      "response": "The default port for HTTP (Hypertext Transfer Protocol) is 80.",
+      "latency_ms": 589.98,
+      "total_tokens": 35,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0625,
+            "contains_match": true,
+            "expected_preview": "80",
+            "response_preview": "The default port for HTTP (Hypertext Transfer Protocol) is 80."
+          }
+        },
+        "hallucination": {
+          "score": 1.0,
+          "passed": true,
+          "details": {
+            "raw_score": 10.0,
+            "reasoning": "The response only answers the question and provides a definition that is implied by the context of the question.",
+            "hallucinated_claims": []
+          }
+        }
+      }
+    }
+  ]
+}

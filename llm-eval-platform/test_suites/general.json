@@ -1,0 +1,62 @@
+[
+  {
+    "prompt": "What is the capital of France?",
+    "expected": "Paris",
+    "category": "factual",
+    "tags": ["geography", "easy"]
+  },
+  {
+    "prompt": "What is 15 multiplied by 8?",
+    "expected": "120",
+    "category": "math",
+    "tags": ["arithmetic"]
+  },
+  {
+    "prompt": "What does CPU stand for?",
+    "expected": "Central Processing Unit",
+    "category": "technology",
+    "tags": ["acronym"]
+  },
+  {
+    "prompt": "In Python, what does len() do?",
+    "expected": "Returns the number of items in an object",
+    "category": "programming",
+    "tags": ["python", "functions"]
+  },
+  {
+    "prompt": "What is the boiling point of water in Celsius?",
+    "expected": "100",
+    "category": "science",
+    "tags": ["physics", "easy"]
+  },
+  {
+    "prompt": "What year was Python programming language created?",
+    "expected": "1991",
+    "category": "technology",
+    "tags": ["history"]
+  },
+  {
+    "prompt": "What does RAG stand for in AI?",
+    "expected": "Retrieval-Augmented Generation",
+    "category": "AI",
+    "tags": ["acronym", "llm"]
+  },
+  {
+    "prompt": "What is the time complexity of binary search?",
+    "expected": "O(log n)",
+    "category": "programming",
+    "tags": ["algorithms", "complexity"]
+  },
+  {
+  "prompt": "Name the three laws of robotics by Isaac Asimov",
+  "expected": "A robot may not injure a human being",
+  "category": "knowledge",
+  "tags": ["science-fiction", "ai-ethics"]
+  },
+  {
+    "prompt": "What is the default port for HTTP?",
+    "expected": "80",
+    "category": "technology",
+    "tags": ["networking", "easy"]
+  }
+]

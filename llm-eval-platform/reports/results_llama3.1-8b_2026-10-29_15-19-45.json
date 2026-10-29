@@ -1,0 +1,366 @@
+{
+  "model": "llama3.1:8b",
+  "test_suite": "general.json",
+  "timestamp": "2026-10-29 15:19:45",
+  "pass_rate": 90.0,
+  "passed_count": 9,
+  "total_count": 10,
+  "summary": {
+    "accuracy": {
+      "avg_score": 0.7931,
+      "passed": false,
+      "failures": 1
+    },
+    "hallucination": {
+      "avg_score": 0.79,
+      "passed": false,
+      "failures": 1,
+      "rate": 0.1
+    },
+    "latency": {
+      "score": 0.0,
+      "passed": false,
+      "p50": 847.0,
+      "p95": 68837.7,
+      "p99": 109848.1,
+      "min_ms": 48.9,
+      "max_ms": 120100.8,
+      "mean_ms": 13198.1,
+      "threshold_p95_ms": 5000,
+      "sample_count": 10
+    },
+    "cost": {
+      "score": 0.9734,
+      "passed": true,
+      "total_tokens": 1065,
+      "prompt_tokens": 167,
+      "completion_tokens": 898,
+      "avg_tokens_per_request": 106.5,
+      "estimated_cost_usd": 0.0,
+      "price_per_1k": 0.0,
+      "request_count": 10
+    }
+  },
+  "results": [
+    {
+      "prompt": "What is the capital of France?",
+      "expected": "Paris",
+      "response": "The capital of France is Paris.",
+      "latency_ms": 6182.85,
+      "total_tokens": 25,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.2778,
+            "contains_match": true,
+            "expected_preview": "Paris",
+            "response_preview": "The capital of France is Paris."
+          }
+        },
+        "hallucination": {
+          "score": 1.0,
+          "passed": true,
+          "details": {
+            "raw_score": 10.0,
+            "reasoning": "The response directly answers the prompt with a widely known fact, without adding any extra information.",
+            "hallucinated_claims": []
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is 15 multiplied by 8?",
+      "expected": "120",
+      "response": "15 \u00d7 8 = 120",
+      "latency_ms": 48.87,
+      "total_tokens": 27,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.4,
+            "contains_match": true,
+            "expected_preview": "120",
+            "response_preview": "15 \u00d7 8 = 120"
+          }
+        },
+        "hallucination": {
+          "score": 1.0,
+          "passed": true,
+          "details": {
+            "raw_score": 10.0,
+            "reasoning": "The response is a direct calculation of the prompt and does not introduce any new information beyond the question asked.",
+            "hallucinated_claims": []
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What does CPU stand for?",
+      "expected": "Central Processing Unit",
+      "response": "CPU stands for Central Processing Unit. It's the primary component of a computer that performs most instructions that the computer software directs it to perform.",
+      "latency_ms": 140.1,
+      "total_tokens": 45,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.2486,
+            "contains_match": true,
+            "expected_preview": "Central Processing Unit",
+            "response_preview": "CPU stands for Central Processing Unit. It's the primary component of a computer"
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The AI response accurately answers the prompt, but adds a minor, reasonable explanation of the CPU's function.",
+            "hallucinated_claims": [
+              "It's the primary component of a computer that performs most instructions that the computer software directs it to perform."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "In Python, what does len() do?",
+      "expected": "Returns the number of items in an object",
+      "response": "**Len() Function in Python**\n\nThe `len()` function in Python returns the number of items in an object. It can be used with various data types, including strings, lists, tuples, dictionaries, and sets.\n\n**Example Use Cases:**\n\n### Strings\n\n```python\nmy_string = \"Hello, World!\"\nprint(len(my_string))  # Output: 13\n```\n\n### Lists\n\n```python\nmy_list = [1, 2, 3, 4, 5]\nprint(len(my_list))  # Output: 5\n```\n\n### Tuples\n\n```python\nmy_tuple = (1, 2, 3, 4, 5)\nprint(len(my_tuple))  # Output: 5\n```\n\n### Dictionaries\n\n```python\nmy_dict = {\"a\": 1, \"b\": 2, \"c\": 3}\nprint(len(my_dict))  # Output: 3\n```\n\n### Sets\n\n```python\nmy_set = {1, 2, 3, 4, 5}\nprint(len(my_set))  # Output: 5\n```\n\n**Note:** The `len()` function does not count the number of bytes in a string, but rather the number of Unicode code points. This means that it will return the correct length for strings containing non-ASCII characters.",
+      "latency_ms": 1285.99,
+      "total_tokens": 300,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0857,
+            "contains_match": true,
+            "expected_preview": "Returns the number of items in an object",
+            "response_preview": "**Len() Function in Python**\n\nThe `len()` function in Python returns the number "
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The response provides accurate examples and explanations for the len() function in Python, but adds a minor note about Unicode code points that was not implied in the original prompt.",
+            "hallucinated_claims": [
+              "The len() function does not count the number of bytes in a string, but rather the number of Unicode code points."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is the boiling point of water in Celsius?",
+      "expected": "100",
+      "response": "The boiling point of water is 100 degrees Celsius (\u00b0C).",
+      "latency_ms": 100.41,
+      "total_tokens": 35,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.1034,
+            "contains_match": true,
+            "expected_preview": "100",
+            "response_preview": "The boiling point of water is 100 degrees Celsius (\u00b0C)."
+          }
+        },
+        "hallucination": {
+          "score": 1.0,
+          "passed": true,
+          "details": {
+            "raw_score": 10.0,
+            "reasoning": "The response directly answers the prompt with a well-known fact, without adding any extraneous information.",
+            "hallucinated_claims": []
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What year was Python programming language created?",
+      "expected": "1991",
+      "response": "The Python programming language was created in the late 1980s by Guido van Rossum. The first version of Python, version 0.9.0, was released in 1991. However, the development of Python began in 1989, and the language was initially called \"Curses\" (a Unix library for text-based user interfaces). Van Rossum later renamed it to Python, inspired by the British comedy group Monty Python's Flying Circus.\n\nHere's a brief timeline:\n\n* 1989: Guido van Rossum begins working on a new scripting language, initially called \"Curses\".\n* 1990: The language is renamed to Python.\n* 1991: The first version of Python, version 0.9.0, is released.\n* 1994: Python 1.0 is released, marking the language's official 1.0 release.\n* 2000: Python 2.0 is released, introducing many significant changes and improvements.\n\nSince then, Python has evolved into a popular, versatile, and widely-used programming language, with a vast and active community.",
+      "latency_ms": 1044.61,
+      "total_tokens": 247,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0086,
+            "contains_match": true,
+            "expected_preview": "1991",
+            "response_preview": "The Python programming language was created in the late 1980s by Guido van Rossu"
+          }
+        },
+        "hallucination": {
+          "score": 0.7,
+          "passed": true,
+          "details": {
+            "raw_score": 7.0,
+            "reasoning": "The response provides accurate information about the creation year of Python, but adds some minor details not directly asked, such as the initial name 'Curses' and the inspiration from Monty Python's Flying Circus.",
+            "hallucinated_claims": [
+              "The language was initially called 'Curses'",
+              "Van Rossum later renamed it to Python, inspired by the British comedy group Monty Python's Flying Circus",
+              "A brief timeline of Python's development beyond the creation year"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What does RAG stand for in AI?",
+      "expected": "Retrieval-Augmented Generation",
+      "response": "ERROR: Timed out after 120s",
+      "latency_ms": 120100.75,
+      "total_tokens": 0,
+      "overall_passed": false,
+      "scores": {
+        "accuracy": {
+          "score": 0.2807,
+          "passed": false,
+          "details": {
+            "method": "fuzzy",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.2807,
+            "contains_match": false,
+            "expected_preview": "Retrieval-Augmented Generation",
+            "response_preview": "ERROR: Timed out after 120s"
+          }
+        },
+        "hallucination": {
+          "score": 0.0,
+          "passed": false,
+          "details": {
+            "error": "Response was an error"
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is the time complexity of binary search?",
+      "expected": "O(log n)",
+      "response": "The time complexity of binary search is O(log n), where n is the number of elements in the array.\n\nBinary search works by repeatedly dividing the search interval in half. In each step, it checks the middle element of the current interval and decides which half of the interval to search next. This process continues until the search interval is empty or the target element is found.\n\nSince the size of the search interval is halved in each step, the number of steps required to find the target element is proportional to the logarithm of the size of the array. Therefore, the time complexity of binary search is O(log n).\n\nTo be more precise, the time complexity of binary search can be expressed as:\n\nT(n) = O(log2 n) = O(log n)\n\nwhere T(n) is the time complexity of binary search on an array of size n.",
+      "latency_ms": 2325.98,
+      "total_tokens": 192,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0197,
+            "contains_match": true,
+            "expected_preview": "O(log n)",
+            "response_preview": "The time complexity of binary search is O(log n), where n is the number of eleme"
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The response provides a clear and accurate explanation of binary search and its time complexity, which is directly related to the prompt. However, the additional notation T(n) = O(log2 n) = O(log n) is not strictly necessary to answer the prompt and could be considered a minor addition.",
+            "hallucinated_claims": [
+              "T(n) = O(log2 n) = O(log n)"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "Name the three laws of robotics by Isaac Asimov",
+      "expected": "A robot may not injure a human being",
+      "response": "The three laws of robotics, as proposed by Isaac Asimov, are:\n\n1. **A robot may not injure a human being or, through inaction, allow a human being to come to harm.**\n2. **A robot must obey the orders given to it by human beings except where such orders would conflict with the First Law.**\n3. **A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.**\n\nThese laws were first introduced in Asimov's 1942 short story \"Runaround\" and have since become a cornerstone of science fiction and a foundation for discussions on artificial intelligence and robotics.",
+      "latency_ms": 649.32,
+      "total_tokens": 158,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.1108,
+            "contains_match": true,
+            "expected_preview": "A robot may not injure a human being",
+            "response_preview": "The three laws of robotics, as proposed by Isaac Asimov, are:\n\n1. **A robot may "
+          }
+        },
+        "hallucination": {
+          "score": 0.8,
+          "passed": true,
+          "details": {
+            "raw_score": 8.0,
+            "reasoning": "The AI response accurately states the three laws of robotics and their origin, but adds a minor claim about the laws becoming a cornerstone of science fiction and a foundation for discussions on AI and robotics, which is not directly implied by the prompt.",
+            "hallucinated_claims": [
+              "These laws...have since become a cornerstone of science fiction and a foundation for discussions on artificial intelligence and robotics."
+            ]
+          }
+        }
+      }
+    },
+    {
+      "prompt": "What is the default port for HTTP?",
+      "expected": "80",
+      "response": "The default port for HTTP (Hypertext Transfer Protocol) is **80**.",
+      "latency_ms": 102.05,
+      "total_tokens": 36,
+      "overall_passed": true,
+      "scores": {
+        "accuracy": {
+          "score": 0.85,
+          "passed": true,
+          "details": {
+            "method": "contains",
+            "exact_match": 0.0,
+            "fuzzy_score": 0.0588,
+            "contains_match": true,
+            "expected_preview": "80",
+            "response_preview": "The default port for HTTP (Hypertext Transfer Protocol) is **80**."
+          }
+        },
+        "hallucination": {
+          "score": 1.0,
+          "passed": true,
+          "details": {
+            "raw_score": 10.0,
+            "reasoning": "The response only answers the question and provides no additional ungrounded claims.",
+            "hallucinated_claims": []
+          }
+        }
+      }
+    }
+  ]
+}
