@@ -11,7 +11,7 @@ A collection of AI/ML projects built from scratch, running locally on H100 with 
 | 3 | [AI Data Analyst](./ai-data-analyst) | ✅ Done |
 | 4 | [AI Software Engineer Agent](./ai-software-engineer) | ✅ Done |
 | 5 | [Self-Correcting AI Agent](./self-correcting-agent) | ✅ Done |
-| 6 | LLM Evaluation Platform | ⬜ |
+| 6 | [LLM Evaluation Platform](./llm-eval-platform) | ✅ Done |
 | 7 | Secure Enterprise AI Assistant | ⬜ |
 | 8 | Intelligent Document AI | ⬜ |
 | 9 | Multi-LLM Router | ⬜ |
