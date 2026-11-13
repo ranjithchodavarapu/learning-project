@@ -1,0 +1,11 @@
+title: Engineering On-Call Runbook
+classification: internal
+department: engineering
+---
+The on-call engineer rotates weekly every Monday at 10am. The on-call phone is handed over in person or via the team channel.
+
+For a production outage, page the incident commander first, then open an incident channel named after the date and service.
+
+Deployments are frozen every Friday after 2pm. Emergency fixes need approval from the engineering director.
+
+Database failover is automatic. Manual failover requires two engineers to confirm the runbook step before executing.

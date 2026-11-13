@@ -1,0 +1,4 @@
+requests>=2.31.0       # HTTP calls to Ollama
+python-dotenv>=1.0.0   # reads .env
+rich>=13.7.0           # terminal tables and panels
+pytest>=8.2.0          # security test suite

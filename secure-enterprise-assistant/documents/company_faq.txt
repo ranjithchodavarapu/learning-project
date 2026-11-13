@@ -1,0 +1,11 @@
+title: Company FAQ
+classification: public
+department: all
+---
+Acme Corp office hours are Monday to Friday, 9am to 5pm local time.
+
+Visitors must sign in at the front desk and wear a visitor badge at all times.
+
+The main office is located at 100 Market Street. Parking is available in the visitor garage for the first two hours.
+
+For general enquiries email hello@acme.example or call the front desk.

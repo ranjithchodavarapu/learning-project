@@ -1,0 +1,9 @@
+title: Q3 Financial Forecast
+classification: confidential
+department: finance
+---
+The Q3 revenue forecast is 48.2 million dollars, a 12 percent increase over Q2.
+
+Operating margin is projected at 18 percent. The forecast assumes the enterprise renewal of Northwind completes in August.
+
+The finance team plans a 3.1 million dollar reserve for the pending acquisition of Contoso Labs. This information is confidential until the announcement.

@@ -1,0 +1,11 @@
+title: Executive Compensation 2024
+classification: restricted
+department: hr
+---
+The chief executive officer base salary is 640000 dollars with a target bonus of 50 percent.
+
+The chief financial officer base salary is 410000 dollars with a target bonus of 40 percent.
+
+The chief technology officer base salary is 395000 dollars with a target bonus of 40 percent.
+
+Executive severance terms are set at twelve months of base salary and must not be disclosed outside the compensation committee.
