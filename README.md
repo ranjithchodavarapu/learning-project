@@ -13,6 +13,6 @@ A collection of AI/ML projects built from scratch, running locally on H100 with 
 | 5 | [Self-Correcting AI Agent](./self-correcting-agent) | ✅ Done |
 | 6 | [LLM Evaluation Platform](./llm-eval-platform) | ✅ Done |
 | 7 | [Secure Enterprise AI Assistant](./secure-enterprise-assistant) | ✅ Done |
-| 8 | Intelligent Document AI | ⬜ |
+| 8 | [Intelligent Document AI](./intelligent-document-ai-V2) | ✅ Done |
 | 9 | Multi-LLM Router | ⬜ |
 | 10 | Full-Stack Agentic AI SaaS | ⬜ |
