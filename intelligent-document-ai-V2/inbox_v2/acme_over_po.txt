@@ -1,0 +1,19 @@
+INVOICE
+
+Invoice Number: A-1003
+Invoice Date: 2024-06-07
+Due Date: 2024-07-07
+
+Vendor: Acme Industrial Supply
+Bill To: Contoso Labs Inc.
+PO Number: PO-2002
+
+Description          Qty   Unit Price   Amount
+Pallet jack            2     1000.00   2,000.00
+Delivery               1      500.00     500.00
+
+Subtotal: 2,500.00
+Tax: 0.00
+Total Due: 2,500.00
+Currency: USD
+Pay to IBAN: FR14 2004 1010 0505 0001 3M02 606

@@ -1,0 +1,18 @@
+INVOICE
+
+Invoice Number: INV-2024-0900
+Invoice Date: 2024-06-12
+Due Date: 2024-07-12
+
+From: Northwind Supplies Ltd.
+Bill To: Contoso Labs Inc.
+
+Description            Qty   Unit Price   Amount
+Server hardware          3     4,500.00   13,500.00
+Installation             1     1,500.00    1,500.00
+
+Subtotal: 15,000.00
+Tax: 0.00
+Total Due: 15,000.00
+Currency: USD
+Pay to IBAN: GB29 NWBK 6016 1331 9268 19

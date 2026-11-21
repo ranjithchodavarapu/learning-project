@@ -1,0 +1,11 @@
+INV0ICENo.5503
+Date:12June2024
+Due:12July2024
+Vendor: Globex Consulting GmbH
+Customer: Initech Ltd
+Item  Qty Rate  Amount
+Consulting hours  8 150.00 1,200.00
+Report writing  1 300.00  300.00
+Subtotal:EUR1,500.00
+VAT19%:EUR285.00
+T0TAL: EUR 1,785.00

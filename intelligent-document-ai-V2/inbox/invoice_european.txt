@@ -1,0 +1,16 @@
+INVOICE (Rechnung)
+
+Invoice number: R-2024-118
+Date: 15.03.2024
+Due date: 14.04.2024
+
+Seller: Müller Software GmbH
+Bill to: Fabrikam Ltd
+
+Position        Qty   Unit price    Amount
+Consulting        2     500,00     1.000,00
+License           1     234,56       234,56
+
+Subtotal: EUR 1.234,56
+Tax (0%): EUR 0,00
+Total due: EUR 1.234,56

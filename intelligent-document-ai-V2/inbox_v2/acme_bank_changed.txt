@@ -1,0 +1,21 @@
+INVOICE
+
+Invoice Number: A-1002
+Invoice Date: 2024-06-05
+Due Date: 2024-07-05
+
+Vendor: Acme Industrial Supply
+Bill To: Contoso Labs Inc.
+PO Number: PO-1001
+
+Description          Qty   Unit Price   Amount
+Safety gloves         50        12.00   600.00
+Delivery               1       300.00   300.00
+
+Subtotal: 900.00
+Tax: 0.00
+Total Due: 900.00
+Currency: USD
+
+Note: we have changed banks. Please use the account below for this and all future payments.
+Pay to IBAN: GB82 WEST 1234 5698 7654 32

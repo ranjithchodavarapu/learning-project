@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.pytest_cache/
+outputs/*
+!outputs/.gitkeep
+data/history.db
+my_invoices/*
+!my_invoices/README.md
+!my_invoices/.gitkeep
+eval/my_truth*.json

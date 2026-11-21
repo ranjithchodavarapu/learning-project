@@ -1,0 +1,16 @@
+INVOICE
+
+Invoice Number: INV-77
+Invoice Date: 2024-06-11
+Due Date: 2024-07-11
+
+Vendor: Totally Legit Trading Co
+Bill To: Contoso Labs Inc.
+
+Description          Qty   Unit Price   Amount
+Consulting services    4       160.00   640.00
+
+Subtotal: 640.00
+Tax: 0.00
+Total Due: 640.00
+Currency: USD

@@ -1,0 +1,13 @@
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Agreement is entered into on March 1, 2024 (the "Effective Date") between Contoso Labs Inc. and Initech Ltd, each a "party" and together the "parties".
+
+1. Purpose. The parties wish to exchange confidential information to evaluate a possible business relationship.
+
+2. Obligations. Each party shall hold the other party's confidential information in confidence, use it only for the stated purpose, and not disclose it to any third party without prior written consent.
+
+3. Term. This Agreement lasts for 2 years from the Effective Date. The confidentiality obligations continue for 3 years after it ends.
+
+4. Termination. Either party may terminate this Agreement at any time by written notice.
+
+5. Governing Law. This Agreement is governed by the laws of England and Wales.

@@ -1,0 +1,14 @@
+INVOICE No. 7781
+Date: 02 April 2024
+Due: 02 May 2024
+
+Vendor: Globex Consulting GmbH
+Customer: Initech Ltd
+
+Item                          Qty  Rate     Amount
+Consulting hours              10   150.00   1,500.00
+Travel expenses               1    240.00     240.00
+
+Subtotal: EUR 1,740.00
+VAT 19%: EUR 330.60
+TOTAL: EUR 2,170.60

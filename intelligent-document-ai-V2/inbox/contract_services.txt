@@ -1,0 +1,19 @@
+SERVICES AGREEMENT
+
+This Services Agreement (the "Agreement") is made between Fabrikam Ltd ("Client") and Northwind Supplies Ltd ("Provider"), together the "parties".
+
+Effective Date: January 1, 2025.
+
+1. Services. Provider shall deliver warehouse management services to Client as described in each statement of work.
+
+2. Term. The initial term is 12 months from the Effective Date. The Agreement renews automatically for successive 12 month terms unless either party gives 60 days written notice before the end of the current term.
+
+3. Payment. Provider invoices Client monthly. Client shall pay each invoice within 30 days of receipt.
+
+4. Confidentiality. Each party shall keep the other party's confidential information secret and use it only for this Agreement.
+
+5. Termination. Either party may terminate this Agreement with 30 days written notice. Client shall pay for services delivered up to the termination date.
+
+6. Liability. Each party's total liability is limited to the fees paid in the 12 months before the claim.
+
+7. Governing Law. This Agreement is governed by the laws of the State of Delaware.

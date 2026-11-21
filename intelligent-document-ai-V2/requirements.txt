@@ -1,0 +1,11 @@
+requests>=2.31.0            # HTTP calls to Ollama
+python-dotenv>=1.0.0        # reads .env
+rich>=13.7.0                # terminal tables
+pypdf>=4.0.0                # reads PDF text layers
+pypdfium2>=4.30.0           # renders scanned PDF pages to images for OCR
+pillow>=10.1.0              # image files and rendering
+rapidocr-onnxruntime>=1.3.0 # OCR engine: pip-only, CPU, no admin rights needed
+pytest>=8.2.0               # test suite
+
+# Optional second OCR engine (needs the 'tesseract' program installed on the machine):
+#   pytesseract>=0.3.10

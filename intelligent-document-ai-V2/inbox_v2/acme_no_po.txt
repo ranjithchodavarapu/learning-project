@@ -1,0 +1,17 @@
+INVOICE
+
+Invoice Number: A-1004
+Invoice Date: 2024-06-09
+Due Date: 2024-07-09
+
+Vendor: Acme Industrial Supply
+Bill To: Contoso Labs Inc.
+
+Description          Qty   Unit Price   Amount
+Safety goggles        10        45.00   450.00
+
+Subtotal: 450.00
+Tax: 0.00
+Total Due: 450.00
+Currency: USD
+Pay to IBAN: FR14 2004 1010 0505 0001 3M02 606

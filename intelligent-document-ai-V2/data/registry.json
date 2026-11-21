@@ -1,0 +1,12 @@
+{
+  "vendors": [
+    {"name": "Northwind Supplies Ltd.",    "bank_account": "GB29 NWBK 6016 1331 9268 19"},
+    {"name": "Müller Software GmbH",       "bank_account": "DE89 3704 0044 0532 0130 00"},
+    {"name": "Globex Consulting GmbH"},
+    {"name": "Acme Industrial Supply",     "bank_account": "FR14 2004 1010 0505 0001 3M02 606", "po_required": true}
+  ],
+  "purchase_orders": [
+    {"po_number": "PO-1001", "vendor": "Acme Industrial Supply", "amount": "5000.00", "currency": "USD"},
+    {"po_number": "PO-2002", "vendor": "Acme Industrial Supply", "amount": "1200.00", "currency": "USD"}
+  ]
+}
